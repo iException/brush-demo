@@ -1,0 +1,14 @@
+{
+    "pages":[
+        "page/index/index"
+    ],
+    "debug": false,
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "宠咖秀",
+        "navigationBarTextStyle": "black",
+        "onReachBottomDistance": 50,
+        "backgroundColor": "#FFFFFF"
+    }
+}
