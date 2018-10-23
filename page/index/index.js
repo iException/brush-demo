@@ -4,14 +4,9 @@ import {
     getImageInfo
 } from '../../utils/util.js'
 Page({
-    onLoad () {
-
-    },
-
     onShow () {
-        getSystemInfo().then(res => {
-            this.ratio = res.windowWidth / 750
-            this.brush = new Brush ('canvas1', this.ratio)
+
+            this.brush = new Brush ('canvas1')
             /*
             * 绘画完毕后要将绘画的内容显示出来的话最后一定要记得调用draw()
             * */
@@ -27,9 +22,7 @@ Page({
             this.brush.setFontSize(36).setFillStyle('blue').setTextAlign('center').setTextBaseline('top').fillText('绘制矩形路径并填充红色', 375, 280)
                 .arc(375, 400, 50, 0, 2 * Math.PI, true).setFillStyle('blue').fill().draw()
 
-            return getImageInfo('https://file.baixing.net/201805/95c1030a8261067dd3ec0ee8cee1f3b8.png')
-
-        }).then(res => {
+            getImageInfo('https://file.baixing.net/201805/95c1030a8261067dd3ec0ee8cee1f3b8.png').then(res => {
 
             /*
         * 将网络图片绘制到画布上（这里需要注意，在生产环境，即小程序发布，网络图片域名需要添加到白名单中，否则无法加载出来）
